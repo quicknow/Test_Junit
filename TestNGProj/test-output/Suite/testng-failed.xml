@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="cn.gloryroad.MultipleBrowserSearchTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="testSogouSearch"/>
+        </methods>
+      </class> <!-- cn.gloryroad.MultipleBrowserSearchTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
