@@ -1,5 +1,6 @@
 package cn.gloryroad.util;
 
+import java.io.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -10,9 +11,14 @@ public class ObjectMap {
 	Properties properties;
 	public ObjectMap(String propFile){
 		
+		 properties = new Properties();
 		try{
+			System.out.println(propFile);
+			//InputStream in = new BufferedInputStream (new FileInputStream(propFile));
 			FileInputStream in = new FileInputStream(propFile);
 			properties.load(in);
+			
+			System.out.println(1122);
 			in.close();
 		} catch(IOException e){
 			System.out.println("读取对象文件出错");

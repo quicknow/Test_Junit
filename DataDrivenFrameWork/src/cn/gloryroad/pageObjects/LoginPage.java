@@ -14,8 +14,7 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver){
 		this.driver = driver;
-	}
-	
+	}	
 
  //返回登陆页面中的用户名输入框页面元素对象
 	public WebElement userName() throws Exception{

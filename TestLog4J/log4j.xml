@@ -3,7 +3,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
 	<appender name="fileAppender" class="org.apache.log4j.FileAppender">
 		<param name="Threshold" value="INFO"/>
-		<param name="File" value="Mail126TestLogfile.log"/>
+		<param name="File" value="logfile.log"/>
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d %-5p [%c{1}] %m %n"/>
 		</layout>
@@ -13,5 +13,3 @@
 		<appender-ref ref="fileAppender"/>
 	</root>
 </log4j:configuration>
-
-  

@@ -17,6 +17,6 @@ public class Constant {
 	
 	public static final String TestDataExcelFilePath="d:\\126邮箱的测试数据.xlsx";
 	
-	public static final String TestDataExcelFileSheet="新建联系人测试用例";
+	public static final String TestDataExcelFileSheet="测试用例";
 
 }

@@ -1,5 +1,7 @@
 package cn.gloryorad.testScripts;
 import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,10 +9,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import cn.gloryroad.appModules.AddContactPerson_Action;
 import cn.gloryroad.appModules.Login_Action;
-import org.openqa.selenium.support.*;
 import cn.gloryroad.util.*;
 
 public class TestMail126AddContactPerson {
@@ -18,6 +20,21 @@ public class TestMail126AddContactPerson {
 	//调用Constant类中的常量Constant.Url
 	private String baseUrl = Constant.Url;
 	
+	//定义dataProvider,并命名testData
+	@DataProvider(name="testData")
+	public static Object[][] data() throws IOException{
+		return ExcelUtil.getTestData(Constant.TestDataExcelFilePath, Constant.TestDataExcelFileSheet);
+	}
+	
+	@Test(dataProvider="testData")
+	public void testAddressBook(String CaseRowNumber, String testCaseName,String mailUserName,String mailPassWord,String contactPersonName,String contactPersonEmail,String contactPersonMobile,String asserContactPersonName,String assertContactPersonEmail,String assertContactPersonMobile) throws Exception{
+		
+		Log.startTestCase(testCaseName);
+		
+		driver.get(baseUrl);
+		
+		Log.info("调用AddContactPerson_Action 类的 execute方法");
+	}
 	@Test
 	public void testAddContactPerson() throws Exception{
 		driver.get(baseUrl);
