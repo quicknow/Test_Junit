@@ -1,5 +1,6 @@
 package cn.gloryroad.util;
 
+import java.io.IOException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -21,7 +22,7 @@ public class ExcelUtil {
 	private static XSSFCell Cell;
 	private static XSSFRow Row;
 	
-	public static void setExcelFile(String Path, String SheetName) throws Exception {
+	public static void setExcelFile(String Path, String SheetName) throws IOException {
 		
 		FileInputStream ExcelFile;
 		try{
@@ -80,9 +81,10 @@ public class ExcelUtil {
 		} catch(Exception e){
 			throw (e);
 		}
+	}	
 		
 		
-		public static object[][] getTestData(String excelFilePath,String sheetName) throws IOException{
+	public static Object[][] getTestData(String excelFilePath,String sheetName) throws Exception{
 			
 			File file= new File(excelFilePath);
 			
@@ -97,18 +99,19 @@ public class ExcelUtil {
 				Workbook = new HSSFWorkbook(inputStream);
 			}
 			
+			
 			Sheet Sheet = Workbook.getSheet(sheetName);
 			
 			int rowCount=Sheet.getLastRowNum() - Sheet.getFirstRowNum();
 			
-			List<Object[]> records = new ArralList<Object[]>();
+			List<Object[]> records = new ArrayList<Object[]>();
 			
 			for(int i = 1;i<rowCount+1;i++){
 				Row row = Sheet.getRow(i);
 				
 				String fields[]=new String[row.getLastCellNum()-2];
 				
-				if(row.getCell(row.getLastCellNum()-2)).getStringCellValue().equals("y")){
+				if(row.getCell(row.getLastCellNum()-2).getStringCellValue().equals("y")){
 					for(int j = 0 ;j<row.getLastCellNum()-2; j++){
 						fields[j] = (String)(row.getCell(j).getCellType()==XSSFCell.CELL_TYPE_STRING?
 								row.getCell(j).getStringCellValue():""+row.getCell(j).getNumericCellValue());
@@ -117,9 +120,11 @@ public class ExcelUtil {
 					records.add(fields);
 				}
 				
+			}
+			
 				Object[][] results = new Object[records.size()][];
 				
-				for(int i=0;i<records.size();i++){
+				for(int i = 0;i<records.size();i++){
 					results[i]= records.get(i);
 				}
 				
@@ -131,8 +136,8 @@ public class ExcelUtil {
 			}
 			
 			
-		}
-		
-		
-	}
 }
+		
+		
+	
+
