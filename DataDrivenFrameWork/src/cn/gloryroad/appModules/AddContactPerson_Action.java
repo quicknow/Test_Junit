@@ -9,13 +9,14 @@ import cn.gloryroad.pageObjects.HomePage;
 import cn.gloryroad.util.Log;
 
 public class AddContactPerson_Action {
+	
 	public static void execute(WebDriver driver,String userName,String password,String contactName,String contactEmail,String contactMobile) throws Exception{
 		Log.info("调用 Login_Action类的execute方法");
 		Login_Action.execute(driver, userName, password);
 		
 		Thread.sleep(3000);
 		Log.info("断言登录后的页面是否包含“未读邮件”的关键字");
-		Assert.assertTrue(driver.getPageSource().contains("未读邮件"));
+		Assert.assertTrue(driver.getPageSource().contains("未读邮件"));		
 		
 		HomePage homePage = new HomePage(driver);
 		Log.info("在登录后的用户主页中，单击“通讯录”链接");

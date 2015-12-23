@@ -17,7 +17,7 @@ public class HomePage {
 	
 	//获取登陆后主页中的“通讯录”链接
 	public WebElement addressLink() throws Exception{
-		element = driver.findElement(objectMap.getLocator("126mail.homepage.addressbook"));
+		element = driver.findElement(objectMap.getLocator("126mail.homePage.addressbook"));
 		return element;
 	}
 }

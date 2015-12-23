@@ -30,7 +30,10 @@ public class TestMail126AddContactPerson {
 	}
 	
 	@Test(dataProvider="testData")
-	public void testAddressBook(String CaseRowNumber, String testCaseName,String mailUserName,String mailPassWord,String contactPersonName,String contactPersonEmail,String contactPersonMobile,String assertContactPersonName,String assertContactPersonEmail,String assertContactPersonMobile) throws Exception{
+	public void testAddressBook(String CaseRowNumber, String testCaseName,String mailUserName,
+			String mailPassWord,String contactPersonName,String contactPersonEmail,
+			String contactPersonMobile,String assertContactPersonName,
+			String assertContactPersonEmail,String assertContactPersonMobile) throws Exception{
 		
 		Log.startTestCase(testCaseName);
 		
@@ -111,14 +114,14 @@ public class TestMail126AddContactPerson {
 	@BeforeMethod
 	public void beforeMethod(){
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();  在driver实例化之前加会报错误
 		driver= new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod
 	public void afterMethod(){
-		driver.quit();
+		//driver.quit();
 	}
 	
 	@BeforeClass
