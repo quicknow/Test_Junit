@@ -50,7 +50,7 @@ public class ExcelUtil {
 			 * 如果单元格的内容为数字类型，则使用getNumericeCellValue()方法获取单元格的内容
 			 * 注意getNumericeCellValue方法返回值为double类型，必须转换字符串类型
 			 * 在Cell.getNumericeCellValue()前面增加“”,用于强制转换double类型到
-			 * String类型,不加“” 则会抛出double类型无法转换到String类型的异常
+			 * String类型,不加“” 则会抛出double类型无法转换到String类型的异常 :String.valueOf(Math.round(Cell.getNumericCellValue()
 			 */
 			String CellData=Cell.getCellType()==XSSFCell.CELL_TYPE_STRING? Cell
 					.getStringCellValue()+""
@@ -111,10 +111,11 @@ public class ExcelUtil {
 				
 				String fields[]=new String[row.getLastCellNum()-2];
 				
+				//String.valueOf(Math.round(Cell.getNumericCellValue()))
 				if(row.getCell(row.getLastCellNum()-2).getStringCellValue().equals("y")){
 					for(int j = 0 ;j<row.getLastCellNum()-2; j++){
 						fields[j] = (String)(row.getCell(j).getCellType()==XSSFCell.CELL_TYPE_STRING?
-								row.getCell(j).getStringCellValue():""+row.getCell(j).getNumericCellValue());
+								row.getCell(j).getStringCellValue():String.valueOf(Math.round(row.getCell(j).getNumericCellValue())));
 					}
 					
 					records.add(fields);

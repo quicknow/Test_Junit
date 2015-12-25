@@ -6,7 +6,7 @@
       <class name="cn.gloryorad.testScripts.TestMail126AddContactPerson">
         <methods>
           <include name="BeforeClass"/>
-          <include name="testAddressBook" invocation-numbers="0 1"/>
+          <include name="testAddressBook" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
         </methods>

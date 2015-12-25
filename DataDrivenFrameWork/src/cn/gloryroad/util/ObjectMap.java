@@ -16,9 +16,8 @@ public class ObjectMap {
 			System.out.println(propFile);
 			//InputStream in = new BufferedInputStream (new FileInputStream(propFile));
 			FileInputStream in = new FileInputStream(propFile);
-			properties.load(in);
+			properties.load(in);		
 			
-			System.out.println(1122);
 			in.close();
 		} catch(IOException e){
 			System.out.println("读取对象文件出错");
@@ -30,10 +29,15 @@ public class ObjectMap {
 		String locator = properties.getProperty(ElementNameInpropFile);
 		String locatorType = locator.split(">")[0];
 		String locatorValue= locator.split(">")[1];
+		
+		
 		/*在Eclipse中的配置文件均默认为ISO-8859-1编码存储，使用getBytes方法可以将字符串编码转换为U
 		 * TF-8编码，以此来解决在配置文件读取中文乱码的问题
 		 */
-		locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"UTF-8");
+		//locatorValue = new String(locatorValue1.getBytes("ISO-8859-1"),"UTF-8"); 经过测试验证发现不需要转
+		
+		//System.out.println("能否打印中文呢？请看："+locatorValue);
+		//locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"GBK");
 		System.out.println("获取的定位类型："+ locatorType+"\t 获取的定位表达式"+locatorValue);
 		
 		if(locatorType.toLowerCase().equals("id"))

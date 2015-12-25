@@ -31,7 +31,9 @@ public class TeatAddPerson {
     driver.findElement(By.id("pwdInput")).clear();
     driver.findElement(By.id("pwdInput")).sendKeys("zwb888888");
     driver.findElement(By.id("loginBtn")).click();
-    driver.findElement(By.id("_mail_tabitem_1_39text")).click();
+    //driver.findElement(By.id("_mail_tabitem_1_39text")).click();
+    
+    driver.findElement(By.xpath("//div[contains(text(),'通讯录')]")).click(); 
    // driver.findElement(By.cssSelector("#_mail_button_14_227 > span.nui-btn-text")).click();
     
     driver.findElement(By.xpath("//span[contains(text(),'新建联系人')]")).click();
@@ -50,7 +52,7 @@ public class TeatAddPerson {
 
   @After
   public void tearDown() throws Exception {
-    //driver.quit();
+    driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
