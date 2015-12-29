@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30291" started-at="2015-12-25T14:22:25Z" finished-at="2015-12-25T14:22:55Z">
+  <suite name="Default suite" duration-ms="38158" started-at="2015-12-28T09:18:01Z" finished-at="2015-12-28T09:18:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30291" started-at="2015-12-25T14:22:25Z" finished-at="2015-12-25T14:22:55Z">
+    <test name="Default test" duration-ms="38158" started-at="2015-12-28T09:18:01Z" finished-at="2015-12-28T09:18:39Z">
       <class name="cn.gloryorad.testScripts.TestMail126AddContactPerson">
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@bff36c]" name="BeforeClass" is-config="true" duration-ms="711" started-at="2015-12-25T22:22:25Z" finished-at="2015-12-25T22:22:25Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@608e14b7]" name="BeforeClass" is-config="true" duration-ms="586" started-at="2015-12-28T17:18:01Z" finished-at="2015-12-28T17:18:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@bff36c]" name="beforeMethod" is-config="true" duration-ms="4814" started-at="2015-12-25T22:22:25Z" finished-at="2015-12-25T22:22:30Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@608e14b7]" name="beforeMethod" is-config="true" duration-ms="5521" started-at="2015-12-28T17:18:01Z" finished-at="2015-12-28T17:18:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testAddressBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@bff36c]" name="testAddressBook" duration-ms="24144" started-at="2015-12-25T22:22:30Z" data-provider="testData" finished-at="2015-12-25T22:22:54Z">
+        <test-method status="PASS" signature="testAddressBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@608e14b7]" name="testAddressBook" duration-ms="29715" started-at="2015-12-28T17:18:07Z" data-provider="testData" finished-at="2015-12-28T17:18:37Z">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddressBook -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@bff36c]" name="afterMethod" is-config="true" duration-ms="552" started-at="2015-12-25T22:22:54Z" finished-at="2015-12-25T22:22:55Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryorad.testScripts.TestMail126AddContactPerson@608e14b7]" name="afterMethod" is-config="true" duration-ms="2279" started-at="2015-12-28T17:18:37Z" finished-at="2015-12-28T17:18:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

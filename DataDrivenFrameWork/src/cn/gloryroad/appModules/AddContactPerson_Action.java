@@ -37,7 +37,7 @@ public class AddContactPerson_Action {
 		Log.info("在联系人手机号的输入框中，输入："+contactMobile);
 		addressBookPage.contactPersonMobile().sendKeys(contactMobile);
 		
-		Log.info("在联系人猴急好的输入框中，单击“确定”按钮");
+		Log.info("在联系人手机号的输入框输入手机号后，单击“确定”按钮");
 		addressBookPage.saveButton().click();
 		Log.info("休眠5秒，等待保存联系人后返回到通讯录的主页面");
 		Thread.sleep(5000);		

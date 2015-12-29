@@ -5,9 +5,7 @@
     <classes>
       <class name="cn.gloryroad.TestDataDrivenByExcelFile">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMehtod"/>
-          <include name="testSearch" invocation-numbers="0"/>
+          <include name="testSearch"/>
         </methods>
       </class> <!-- cn.gloryroad.TestDataDrivenByExcelFile -->
     </classes>

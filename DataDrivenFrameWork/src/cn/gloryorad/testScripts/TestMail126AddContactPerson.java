@@ -51,8 +51,8 @@ public class TestMail126AddContactPerson {
 		
 		Log.info("调用AddContactPerson_Action类的execute方法后，休眠3秒");
 		Thread.sleep(3000);
-		Log.info("断言通讯录的页面是否包含联系人姓名的关键字");
 		
+		Log.info("断言通讯录的页面是否包含联系人姓名的关键字");		
 		try{
 			Assert.assertTrue(driver.getPageSource().contains(assertContactPersonName));
 		} catch(AssertionError error){
@@ -70,7 +70,7 @@ public class TestMail126AddContactPerson {
 			Assert.fail("断言通讯录的页面是否包含联系人姓名的电子邮件地址失败");
 		}
 		
-		Log.info("断言通讯录的页面是否包含联系人手机好的关键字");
+		Log.info("断言通讯录的页面是否包含联系人手机号的关键字");
 		
 		try{
 			Assert.assertTrue(driver.getPageSource().contains(assertContactPersonMobile));

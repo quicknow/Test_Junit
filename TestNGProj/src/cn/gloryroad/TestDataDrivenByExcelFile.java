@@ -31,7 +31,7 @@ public class TestDataDrivenByExcelFile {
 	@DataProvider(name="testData")
 	public static Object[][] words() throws IOException{
 		
-		return getTestData("d:\\","testData.xls","Sheet1");
+		return getTestData("d:\\","testData.xlsx","Sheet1");
 	}
 	
 	//测试用例函数参数使用testData数据源的数据，每一行调用1次函数
