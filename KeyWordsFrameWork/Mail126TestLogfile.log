@@ -1,0 +1,107 @@
+2016-01-04 14:26:20,008 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-04 14:34:15,786 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 08:55:15,024 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 09:33:48,551 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 09:36:34,725 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 09:46:05,757 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 09:51:19,807 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:00:20,212 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:00:46,784 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:01:03,687 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:04:15,023 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:12:20,353 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:12:20,353 INFO  [Log] 从Excel文件中读取的操作值是null 
+2016-01-07 10:19:27,314 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:19:27,314 INFO  [Log] 从Excel文件中读取的操作值是null 
+2016-01-07 10:24:02,972 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-01-07 10:24:02,972 INFO  [Log] 从Excel文件中读取的操作值是null 
+2016-01-07 10:24:05,968 INFO  [Log] IE浏览器实例已经声明 
+2016-01-07 10:24:05,968 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-01-07 10:24:07,731 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-01-07 10:24:07,731 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-01-07 10:24:07,935 INFO  [Log] 清除用户名输入框的所有内容 
+2016-01-07 10:24:08,278 INFO  [Log] 在用户名输入框输入用户名：testform1 
+2016-01-07 10:24:08,278 INFO  [Log] 从Excel文件中读取的操作值是testform1 
+2016-01-07 10:24:08,450 INFO  [Log] 清空密码输入框 
+2016-01-07 10:24:08,808 INFO  [Log] 从Excel文件中读取的操作值是zwb888888 
+2016-01-07 10:24:25,869 INFO  [Log] 单击登录按钮 
+2016-01-07 10:24:25,869 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:36,264 INFO  [Log] 显示等待元素时出现异常，具体异常信息：Timed out after 10 seconds waiting for presence of element located by: By.xpath: //a[contains(.,'收件人')]
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:24:36,265 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.recipientslink 
+2016-01-07 10:24:36,656 INFO  [Log] 单击写信链接时出现异常，具体异常信息：Unable to find element with xpath == //*[contains(@id,'_mail_component_')]/span[contains(.,'写信')] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 391 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+*** Element info: {Using=xpath, value=//*[contains(@id,'_mail_component_')]/span[contains(.,'写信')]}
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:24:36,656 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:47,046 INFO  [Log] 显示等待元素时出现异常，具体异常信息：Timed out after 10 seconds waiting for presence of element located by: By.xpath: //a[contains(.,'收件人')]
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:24:47,046 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.recipientslink 
+2016-01-07 10:24:47,468 INFO  [Log] 在收件人输入框中输入收件人信息时出现异常，具体异常信息：Unable to find element with xpath == //*[contains(@id,'_mail_emailinput_0_')]/input (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 406 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+*** Element info: {Using=xpath, value=//*[contains(@id,'_mail_emailinput_0_')]/input}
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:24:47,468 INFO  [Log] 从Excel文件中读取的操作值是testform1@126.com 
+2016-01-07 10:24:47,734 INFO  [Log] 在邮件主题输入框输入邮件主题时出现异常，具体异常信息：Element is not displayed (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 94 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:24:47,734 INFO  [Log] 从Excel文件中读取的操作值是这是一封测试邮件的标题 
+2016-01-07 10:24:49,949 INFO  [Log] 按tab键成功 
+2016-01-07 10:24:49,949 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:49,996 INFO  [Log] 成功粘贴邮件正文：这是一封测试邮件的正文 
+2016-01-07 10:24:49,996 INFO  [Log] 从Excel文件中读取的操作值是这是一封测试邮件的正文 
+2016-01-07 10:24:49,996 INFO  [Log] 单击添加附件按钮时出现异常，具体异常信息：null 
+2016-01-07 10:24:49,996 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:49,996 INFO  [Log] 成功粘贴上传文件名：c:\a.log 
+2016-01-07 10:24:49,996 INFO  [Log] 从Excel文件中读取的操作值是c:\a.log 
+2016-01-07 10:24:49,996 INFO  [Log] 按键Enter键成功 
+2016-01-07 10:24:49,996 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:54,006 INFO  [Log] 休眠4秒成功 
+2016-01-07 10:24:54,006 INFO  [Log] 从Excel文件中读取的操作值是4000 
+2016-01-07 10:24:54,006 INFO  [Log] 单击发送邮件按钮时出现异常，具体异常信息：null 
+2016-01-07 10:24:54,006 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:24:57,018 INFO  [Log] 休眠3秒成功 
+2016-01-07 10:24:57,018 INFO  [Log] 从Excel文件中读取的操作值是3000 
+2016-01-07 10:25:07,555 INFO  [Log] 显示等待元素时出现异常，具体异常信息：Timed out after 10 seconds waiting for presence of element located by: By.xpath: //*[contains(@id,'_succInfo')]
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '192.168.128.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: e841a9b4-744b-42a4-a71f-60c1de57ab8a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45766/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-01-07 10:25:07,556 INFO  [Log] 从Excel文件中读取的操作值是sendmailsuccesspage.succinfo 
+2016-01-07 10:25:07,696 INFO  [Log] 出现断言失败，具体断言失败信息：expected [true] but found [false] 
+2016-01-07 10:25:07,696 INFO  [Log] 从Excel文件中读取的操作值是发送成功11 
+2016-01-07 10:25:07,696 INFO  [Log] 关闭浏览器窗口 
+2016-01-07 10:25:09,298 INFO  [Log] ------------      "SendMail01 "执行结束 ----------- 
+2016-01-07 10:25:09,298 INFO  [Log] ------------      "visit126MailHomePage01 "开始执行 ----------- 
+2016-01-07 10:25:09,298 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-01-07 10:25:11,936 INFO  [Log] IE浏览器实例已经声明 
+2016-01-07 10:25:11,936 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-01-07 10:25:14,089 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-01-07 10:25:14,089 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-01-07 10:25:14,136 INFO  [Log] 成功断言关键字“二维码登录“ 
+2016-01-07 10:25:14,136 INFO  [Log] 从Excel文件中读取的操作值是二维码登录 
+2016-01-07 10:25:14,136 INFO  [Log] 关闭浏览器窗口 
+2016-01-07 10:25:15,354 INFO  [Log] ------------      "visit126MailHomePage01 "执行结束 ----------- 

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.gloryroad.VisitSogouByIE">
+      <class name="cn.gloryroad.testScript.TestSuiteByExcel">
         <methods>
-          <include name="visitSogou"/>
-          <include name="setUp"/>
+          <include name="testTestSuite"/>
+          <include name="BeforeClass"/>
         </methods>
-      </class> <!-- cn.gloryroad.VisitSogouByIE -->
+      </class> <!-- cn.gloryroad.testScript.TestSuiteByExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

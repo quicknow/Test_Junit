@@ -67,5 +67,6 @@
 	<classpathentry kind="lib" path="F:/selenium_java/Test_Junit/poi-3.11/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="F:/selenium_java/Test_Junit/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="F:/selenium_java/Test_Junit/testng-5.12.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

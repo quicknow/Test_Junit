@@ -1,14 +1,19 @@
 package cn.gloryroad.configuration;
 
 import static cn.gloryroad.util.WaitUitl.waitWebElement;
+
 import java.util.List;
+
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
+
 import cn.gloryroad.util.KeyBoardUtil;
+import cn.gloryroad.util.Log;
 import cn.gloryroad.util.ObjectMap;
 import cn.gloryroad.util.WaitUitl;
 
@@ -16,7 +21,14 @@ public class KeyWordsAction {
 	//声明静态WebDriver 对象，用于在此类中Driver的操作
 	public static WebDriver driver;
 	//声明存储定位表达式配置文件的ObjectMap对象
-	private static ObjectMap objectMap = new ObjectMap("F:\\selenium_java\\Test_Junit\\KeyWordsFrameWork\\objectMap.properties");
+	private static ObjectMap objectMap = new ObjectMap(Constants.Path_ConfigurationFile);
+	
+	static{
+		//指定Log4j配置文件为log4j.xml
+		DOMConfigurator.configure("log4j.xml");
+	}
+	
+	
 	/*
 	 * 此方法的名称对应Excel文件“关键字”列中的open_browser关键字
 	 * Excel 文件“操作值”列中的内容用于指定测试用例用何种浏览器运行测试用例
@@ -29,11 +41,14 @@ public class KeyWordsAction {
 		if(browsername.equals("ie")){
 			System.setProperty("webdriver.ie.driver", "C:\\Python27\\IEDriverServer.exe");
 			driver= new InternetExplorerDriver();
+			Log.info("IE浏览器实例已经声明");
 		} else if(browsername.equals("firefox")){
 			driver = new FirefoxDriver();
+			Log.info("火狐浏览器实例已经声明");
 		} else {
 			System.setProperty("webdriver.chrome.driver","C:\\Python27\\chromedriver.exe");
 			driver= new ChromeDriver();
+			Log.info("chrome浏览器实例已经声明");
 		}
 	}
 	
@@ -42,6 +57,7 @@ public class KeyWordsAction {
 	public static void navigate(String url){
 		
 		driver.get(url);
+		Log.info("浏览器访问网址"+url);
 	}
 	
 	//此方法的名称对应Excel文件“关键字”列中的input_userName 关键字
@@ -52,8 +68,11 @@ public class KeyWordsAction {
 		
 		try{
 			driver.findElement(objectMap.getLocator("login.username")).clear();
+			Log.info("清除用户名输入框的所有内容");
 			driver.findElement(objectMap.getLocator("login.username")).sendKeys(userName);
+			Log.info("在用户名输入框输入用户名："+userName);
 		}catch(Exception e){
+			Log.info("在用户名输入框输入用户名出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -65,8 +84,10 @@ public class KeyWordsAction {
 		
 		try{
 			driver.findElement(objectMap.getLocator("login.password")).clear();
+			Log.info("清空密码输入框");
 			driver.findElement(objectMap.getLocator("login.password")).sendKeys(password);
 		}catch(Exception e){
+			Log.info("在密码框输入密码时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -81,7 +102,9 @@ public class KeyWordsAction {
 	public static void click_login(String string){
 		try{
 			driver.findElement(objectMap.getLocator("login.button")).click();
+			Log.info("单击登录按钮");
 		} catch(Exception e){
+			Log.info("单击登录按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -97,8 +120,10 @@ public class KeyWordsAction {
 		
 		try{
 			//调用封装的waitWebElement函数显示等待页面元素是否出现
-			waitWebElement(driver,objectMap.getLocator(xpathExpression));	
+			waitWebElement(driver,objectMap.getLocator(xpathExpression));
+			Log.info("显式等待元素出现成功，元素是"+xpathExpression);
 		} catch(Exception e){
+			Log.info("显示等待元素时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 		
@@ -110,7 +135,9 @@ public class KeyWordsAction {
 		
 		try{
 			driver.findElement(objectMap.getLocator("homepage.writeLetterLink")).click();
+			Log.info("单击写信链接成功");
 		} catch(Exception e){
+			Log.info("单击写信链接时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}	
 	}
@@ -121,8 +148,10 @@ public class KeyWordsAction {
 	public static void input_recipients(String recipients){
 		
 		try{
-			driver.findElement(objectMap.getLocator("writemailpage.recipients")).sendKeys(recipients);;
+			driver.findElement(objectMap.getLocator("writemailpage.recipients")).sendKeys(recipients);
+			Log.info("在收件人输入框成功输入收件人信息："+recipients);
 		} catch(Exception e){
+			Log.info("在收件人输入框中输入收件人信息时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 		
@@ -134,8 +163,10 @@ public class KeyWordsAction {
 		
 		try{
 			driver.findElement(objectMap.getLocator("writemailpage.mailsubject")).sendKeys(mailSubject);
+			Log.info("成功输入邮件主题："+mailSubject);
 		} catch(Exception e){
 			e.printStackTrace();
+			Log.info("在邮件主题输入框输入邮件主题时出现异常，具体异常信息："+e.getMessage());
 		}
 	}
 	
@@ -149,7 +180,9 @@ public class KeyWordsAction {
 			Thread.sleep(2000);
 			//调用KeyBoardUtil类的封装方法pressTabKey
 			KeyBoardUtil.pressEnterKey();
+			Log.info("按tab键成功");
 		} catch(Exception e){
+			Log.info("按tab键时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -159,7 +192,9 @@ public class KeyWordsAction {
 	public static void paste_mailContent(String mailContent){
 		try{			
 				KeyBoardUtil.setAndctrlVClipboardData(mailContent);
+				Log.info("成功粘贴邮件正文："+mailContent);
 			} catch(Exception e){
+				Log.info("在输入框粘贴内容时出现异常，具体异常细心："+e.getMessage());
 				e.printStackTrace();
 			}
 			
@@ -171,7 +206,9 @@ public class KeyWordsAction {
 		
 		try{
 			driver.findElement(objectMap.getLocator("writemailpage.addattachementlink")).click();
+			Log.info("单击添加附件按钮成功");
 		} catch(Exception e){
+			Log.info("单击添加附件按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -182,7 +219,9 @@ public class KeyWordsAction {
 	public static void paste_uploadFileName(String uploadFileName){
 		try{
 			KeyBoardUtil.setAndctrlVClipboardData(uploadFileName);
+			Log.info("成功粘贴上传文件名："+uploadFileName);
 		} catch(Exception e){
+			Log.info("在文件名输入框中上传文件名称时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 		
@@ -193,7 +232,9 @@ public class KeyWordsAction {
 	public static void press_enter(String string){
 		try{
 			KeyBoardUtil.pressEnterKey();
+			Log.info("按键Enter键成功");
 		} catch(Exception e){
+			Log.info("按Enter键时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -204,7 +245,9 @@ public class KeyWordsAction {
 		
 		try{
 			WaitUitl.sleep(Integer.parseInt(sleepTime));
+			Log.info("休眠"+Integer.parseInt(sleepTime)/1000+"秒成功");
 		} catch(Exception e){
+			Log.info("线程休眠时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -221,7 +264,11 @@ public class KeyWordsAction {
 			 */
 			
 			List<WebElement> buttons = driver.findElements(objectMap.getLocator("writemailpage.sendmilbuttons"));
+			
+			buttons.get(0).click();
+			Log.info("单击发送邮件按钮成功");
 		} catch(Exception e){
+			Log.info("单击发送邮件按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -234,7 +281,9 @@ public class KeyWordsAction {
 		
 		try{
 			Assert.assertTrue(driver.getPageSource().contains(assertString));
+			Log.info("成功断言关键字“"+assertString+"“");
 		} catch(AssertionError e){
+			Log.info("出现断言失败，具体断言失败信息："+e.getMessage());
 			System.out.println("断言失败");
 		}
 	}
@@ -247,8 +296,10 @@ public class KeyWordsAction {
 		
 		try{
 			System.out.println("浏览器关闭函数被执行");
+			Log.info("关闭浏览器窗口");
 			driver.quit();
 		} catch(Exception e){
+			Log.info("关闭浏览器出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
 	}
