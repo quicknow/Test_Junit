@@ -134,7 +134,7 @@ public class KeyWordsAction {
 	public static void click_writeLetterLink(String string){
 		
 		try{
-			driver.findElement(objectMap.getLocator("homepage.writeLetterLink")).click();
+			driver.findElement(objectMap.getLocator(string)).click();
 			Log.info("单击写信链接成功");
 		} catch(Exception e){
 			Log.info("单击写信链接时出现异常，具体异常信息："+e.getMessage());
@@ -179,7 +179,7 @@ public class KeyWordsAction {
 			
 			Thread.sleep(2000);
 			//调用KeyBoardUtil类的封装方法pressTabKey
-			KeyBoardUtil.pressEnterKey();
+			KeyBoardUtil.pressTabKey();
 			Log.info("按tab键成功");
 		} catch(Exception e){
 			Log.info("按tab键时出现异常，具体异常信息："+e.getMessage());
@@ -190,11 +190,14 @@ public class KeyWordsAction {
 	//此方法的名称对应Exce文件“关键字”列中的paste_mailContent关键字
 	//通过剪切板粘贴的方式，在指定输入框再输入字符，列如，邮件正文
 	public static void paste_mailContent(String mailContent){
-		try{			
-				KeyBoardUtil.setAndctrlVClipboardData(mailContent);
+		try{	
+			    System.out.println("mailContent="+mailContent);
+			    Thread.sleep(6000);
+				KeyBoardUtil.setAndctrlVClipboardData(mailContent);				
+				System.out.println("已结执行了粘贴动作");
 				Log.info("成功粘贴邮件正文："+mailContent);
 			} catch(Exception e){
-				Log.info("在输入框粘贴内容时出现异常，具体异常细心："+e.getMessage());
+				Log.info("在输入框粘贴内容时出现异常，具体异常信息："+e.getMessage());
 				e.printStackTrace();
 			}
 			
@@ -204,8 +207,10 @@ public class KeyWordsAction {
 	//用于单击添加附件的按钮
 	public static void click_addAttachment(String string){
 		
-		try{
-			driver.findElement(objectMap.getLocator("writemailpage.addattachementlink")).click();
+		try{			
+			Thread.sleep(5000);
+			System.out.println("成功进入了执行函数"+string);
+			driver.findElement(objectMap.getLocator(string)).click();			
 			Log.info("单击添加附件按钮成功");
 		} catch(Exception e){
 			Log.info("单击添加附件按钮时出现异常，具体异常信息："+e.getMessage());
@@ -218,6 +223,7 @@ public class KeyWordsAction {
 	//通过剪切板粘贴的方式，在文件上传框体的文件名输入框中输入要上传文件的路径和名称
 	public static void paste_uploadFileName(String uploadFileName){
 		try{
+			Thread.sleep(5000);
 			KeyBoardUtil.setAndctrlVClipboardData(uploadFileName);
 			Log.info("成功粘贴上传文件名："+uploadFileName);
 		} catch(Exception e){
@@ -263,7 +269,7 @@ public class KeyWordsAction {
 			 * 按钮对象来完成单击发送邮件的操作
 			 */
 			
-			List<WebElement> buttons = driver.findElements(objectMap.getLocator("writemailpage.sendmilbuttons"));
+			List<WebElement> buttons = driver.findElements(objectMap.getLocator("writemailpage.sendmailbuttons"));
 			
 			buttons.get(0).click();
 			Log.info("单击发送邮件按钮成功");

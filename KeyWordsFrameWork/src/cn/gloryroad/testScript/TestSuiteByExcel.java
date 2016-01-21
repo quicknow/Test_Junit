@@ -35,7 +35,7 @@ public class TestSuiteByExcel {
 		//System.out.println("testCasesCount="+testCasesCount);
 		//使用for循环，执行所有标记“y”的测试用例
 		for(int testCaseNo=1;testCaseNo<=testCasesCount;testCaseNo++){
-			
+			Thread.sleep(2000);
 			//读取“测试用例集合”Sheet中每行的测试用例序号
 			testCaseID= ExcelUtil.getCellData(Constants.Sheet_TestSuite,testCaseNo,Constants.Col_TestCaseID);
 			System.out.println("testCaseID="+testCaseID);
@@ -46,7 +46,8 @@ public class TestSuiteByExcel {
 			if(testCaseRunFlag.equalsIgnoreCase("y")){
 				//在日志中打印测试用例开始执行
 				Log.startTestCase(testCaseID);
-				//在“发送邮件”Sheet中，获取当前要执行测试用例的第一个步骤所在行行号
+				//在“发送邮件”Sheet中，获取当前要执行测试用例的第一个步骤所在行行
+				
 				System.out.println("hehe");
 				testStep = ExcelUtil.getFirstRowContainsTestCaseID(Constants.Sheet_TestSteps, testCaseID, Constants.Col_TestCaseID);
 				System.out.println("testStep="+testStep);
@@ -58,11 +59,13 @@ public class TestSuiteByExcel {
 					//从“发送邮件”Sheet中读取关键字和操作值，调用execute_Actions方法
 					keyword = ExcelUtil.getCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_KeyWordAction);
 					
+					System.out.println(testStep+" "+keyword);
 					//在日志文件中打印操作值信息
 					Log.info("从Excel文件中读取的操作值是"+value);
 					value= ExcelUtil.getCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_ActionValue);
 					
-					execute_Actions();
+					System.out.println(testStep+" "+value);					
+					execute_Actions(keyword,value);
 					
 				}
 				
@@ -80,7 +83,7 @@ public class TestSuiteByExcel {
 	}
 	
 			
-	private static void execute_Actions(){
+	private static void execute_Actions(String keyword,String value){
 		
 		try{
 			

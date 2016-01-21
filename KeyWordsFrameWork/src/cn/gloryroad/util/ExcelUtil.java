@@ -1,6 +1,7 @@
 package cn.gloryroad.util;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -47,7 +48,8 @@ public class ExcelUtil {
 		} catch(Exception e){
 			System.out.println("Excel路径设定失败");
 			e.printStackTrace();
-		}
+		} 
+		
 	}
 	
 	
@@ -62,7 +64,7 @@ public class ExcelUtil {
 			//如果单元格的内容为数字类型，则使用getNumericeCellValue方法获取单元格的内容
 			String CellData = Cell.getCellType()==XSSFCell.CELL_TYPE_STRING?Cell.getStringCellValue()+""
 					: String.valueOf(Math.round(Cell.getNumericCellValue()));
-			
+			//System.out.println("yyyeeeehehe-CellData="+CellData);
 			//函数返回指定单元格的字符串内容
 			return CellData;
 			

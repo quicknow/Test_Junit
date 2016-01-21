@@ -34,7 +34,7 @@ public class ObjectMap {
 		/*在Eclipse中的配置文件均默认为ISO-8859-1编码存储，使用getBytes方法可以将字符串编码转换为U
 		 * TF-8编码，以此来解决在配置文件读取中文乱码的问题
 		 */
-		locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"UTF-8"); //经过测试验证发现不需要转
+		locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"UTF-8");
 		
 		//System.out.println("能否打印中文呢？请看："+locatorValue);
 		//locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"GBK");

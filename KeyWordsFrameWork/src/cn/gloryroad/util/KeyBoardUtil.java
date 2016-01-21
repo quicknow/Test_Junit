@@ -55,6 +55,7 @@ public class KeyBoardUtil {
 		StringSelection stringSelection = new StringSelection(string);
 		
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		
 		Robot robot = null;
 		
 		try{

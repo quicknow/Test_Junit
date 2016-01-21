@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.gloryroad.testScript.TestSuiteByExcel">
+      <class name="cn.gloryroad.testScript.TestSendmailWithAttachment">
         <methods>
-          <include name="testTestSuite"/>
-          <include name="BeforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testSendMailWithAttachment"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- cn.gloryroad.testScript.TestSuiteByExcel -->
+      </class> <!-- cn.gloryroad.testScript.TestSendmailWithAttachment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
