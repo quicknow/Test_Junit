@@ -39,6 +39,7 @@ public class TestSuiteByExcel {
 			//读取“测试用例集合”Sheet中每行的测试用例序号
 			testCaseID= ExcelUtil.getCellData(Constants.Sheet_TestSuite,testCaseNo,Constants.Col_TestCaseID);
 			System.out.println("testCaseID="+testCaseID);
+			System.out.println("testCaseNo="+testCaseNo);
 			//读取“测试用例集合”Sheet中每行的是否运行列中的值
 			testCaseRunFlag=ExcelUtil.getCellData(Constants.Sheet_TestSuite, testCaseNo,Constants.Col_RunFlag);
 			System.out.println("testCaseRunFlag="+testCaseRunFlag);
@@ -48,7 +49,7 @@ public class TestSuiteByExcel {
 				Log.startTestCase(testCaseID);
 				//在“发送邮件”Sheet中，获取当前要执行测试用例的第一个步骤所在行行
 				
-				System.out.println("hehe");
+				System.out.println("用例开始执行");
 				testStep = ExcelUtil.getFirstRowContainsTestCaseID(Constants.Sheet_TestSteps, testCaseID, Constants.Col_TestCaseID);
 				System.out.println("testStep="+testStep);
 				//在“发送邮件”Sheet中，获取当前要执行测试用例的最后一个步骤所在行行号
@@ -61,8 +62,9 @@ public class TestSuiteByExcel {
 					
 					System.out.println(testStep+" "+keyword);
 					//在日志文件中打印操作值信息
-					Log.info("从Excel文件中读取的操作值是"+value);
+					//Log.info("从Excel文件中读取的操作值是"+value);
 					value= ExcelUtil.getCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_ActionValue);
+					Log.info("从Excel文件中读取的操作值是"+value);
 					
 					System.out.println(testStep+" "+value);					
 					execute_Actions(keyword,value);
