@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 
+import cn.gloryroad.testScript.TestSuiteByExcel;
 import cn.gloryroad.util.KeyBoardUtil;
 import cn.gloryroad.util.Log;
 import cn.gloryroad.util.ObjectMap;
@@ -72,6 +73,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator("login.username")).sendKeys(userName);
 			Log.info("在用户名输入框输入用户名："+userName);
 		}catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("在用户名输入框输入用户名出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -87,6 +89,7 @@ public class KeyWordsAction {
 			Log.info("清空密码输入框");
 			driver.findElement(objectMap.getLocator("login.password")).sendKeys(password);
 		}catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("在密码框输入密码时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -104,6 +107,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator("login.button")).click();
 			Log.info("单击登录按钮");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("单击登录按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -123,6 +127,7 @@ public class KeyWordsAction {
 			waitWebElement(driver,objectMap.getLocator(xpathExpression));
 			Log.info("显式等待元素出现成功，元素是"+xpathExpression);
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("显示等待元素时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -137,6 +142,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator(string)).click();
 			Log.info("单击写信链接成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("单击写信链接时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}	
@@ -151,6 +157,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator("writemailpage.recipients")).sendKeys(recipients);
 			Log.info("在收件人输入框成功输入收件人信息："+recipients);
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("在收件人输入框中输入收件人信息时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -165,6 +172,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator("writemailpage.mailsubject")).sendKeys(mailSubject);
 			Log.info("成功输入邮件主题："+mailSubject);
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			e.printStackTrace();
 			Log.info("在邮件主题输入框输入邮件主题时出现异常，具体异常信息："+e.getMessage());
 		}
@@ -182,6 +190,7 @@ public class KeyWordsAction {
 			KeyBoardUtil.pressTabKey();
 			Log.info("按tab键成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("按tab键时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -197,6 +206,7 @@ public class KeyWordsAction {
 				System.out.println("已结执行了粘贴动作");
 				Log.info("成功粘贴邮件正文："+mailContent);
 			} catch(Exception e){
+				TestSuiteByExcel.testResult=false;
 				Log.info("在输入框粘贴内容时出现异常，具体异常信息："+e.getMessage());
 				e.printStackTrace();
 			}
@@ -213,6 +223,7 @@ public class KeyWordsAction {
 			driver.findElement(objectMap.getLocator(string)).click();			
 			Log.info("单击添加附件按钮成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("单击添加附件按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -227,6 +238,7 @@ public class KeyWordsAction {
 			KeyBoardUtil.setAndctrlVClipboardData(uploadFileName);
 			Log.info("成功粘贴上传文件名："+uploadFileName);
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("在文件名输入框中上传文件名称时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -240,6 +252,7 @@ public class KeyWordsAction {
 			KeyBoardUtil.pressEnterKey();
 			Log.info("按键Enter键成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("按Enter键时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -253,6 +266,7 @@ public class KeyWordsAction {
 			WaitUitl.sleep(Integer.parseInt(sleepTime));
 			Log.info("休眠"+Integer.parseInt(sleepTime)/1000+"秒成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("线程休眠时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -274,6 +288,7 @@ public class KeyWordsAction {
 			buttons.get(0).click();
 			Log.info("单击发送邮件按钮成功");
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("单击发送邮件按钮时出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}
@@ -289,6 +304,7 @@ public class KeyWordsAction {
 			Assert.assertTrue(driver.getPageSource().contains(assertString));
 			Log.info("成功断言关键字“"+assertString+"“");
 		} catch(AssertionError e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("出现断言失败，具体断言失败信息："+e.getMessage());
 			System.out.println("断言失败");
 		}
@@ -305,6 +321,7 @@ public class KeyWordsAction {
 			Log.info("关闭浏览器窗口");
 			driver.quit();
 		} catch(Exception e){
+			TestSuiteByExcel.testResult=false;
 			Log.info("关闭浏览器出现异常，具体异常信息："+e.getMessage());
 			e.printStackTrace();
 		}

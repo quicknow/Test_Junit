@@ -16,6 +16,7 @@ public class TestSuiteByExcel {
 	public static int testLastStep;
 	public static String testCaseID;
 	public static String testCaseRunFlag;
+	public static Boolean testResult=true;
 	
 	@Test
 	public void testTestSuite() throws Exception{
@@ -69,10 +70,29 @@ public class TestSuiteByExcel {
 					System.out.println(testStep+" "+value);					
 					execute_Actions(keyword,value);
 					
+					if(testResult==false){
+					/*
+					 * 如果测试用例的任何一个测试步骤执行失败，则测试用例集合Sheet中的当前执行
+					 * 测试用例的执行结果设定为“测试执行失败”	
+					 */
+						ExcelUtil.setCellData("测试用例集合", testCaseNo,Constants.Col_TestSuiteTestResult, "测试执行失败");
+						//在日志中打印测试用例执行完毕
+						Log.endTestCase(testCaseID);
+						//退出循环，执行下一个测试用例
+						break;
+					} 
+					
+					if(testResult ==true){
+					/*
+					 * 如果测试用例的所有步骤执行成功，则会在测试用例集合Sheet中的当前执行测试
+					 * 用例的执行结果设定为“测试执行成功”	
+					 */
+						ExcelUtil.setCellData(Constants.Sheet_TestSuite, testCaseNo, Constants.Col_TestSuiteTestResult, "测试执行成功");
+					}
+					
 				}
 				
-				//在日志中打印测试用例执行完毕
-				Log.endTestCase(testCaseID);
+				
 				
 			}
 			
@@ -97,8 +117,22 @@ public class TestSuiteByExcel {
 				
 				if(method[i].getName().equals(keyword)){
 					method[i].invoke(keyWordsaction, value);
+					if(testResult == true){
+					/*
+					 * 当前测试步骤执行成功，在“发送邮件”Sheet中，会将当前执行的测试步骤结果设定为
+					 * “测试步骤执行成功”	
+					 */
+						ExcelUtil.setCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_TestStepTestResult, "测试步骤执行成功");
+					} else{
+					 /*
+					  * 当前测试步骤执行失败，在“发送邮寄”Sheet中，会将当前执行的测试步骤结果设定为“测试步骤执行失败”
+					  */
+						ExcelUtil.setCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_TestStepTestResult, "测试步骤执行失败");
+						KeyWordsAction.close_browser("");
+						break;
+					}
 					
-					break;
+					
 				}
 			}
 			

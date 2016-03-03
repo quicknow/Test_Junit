@@ -2472,3 +2472,124 @@ testLastStep=24  此处有问题
 2016-03-02 13:17:22,557 INFO  [Log] 从Excel文件中读取的操作值是无 
 2016-03-02 13:17:22,557 INFO  [Log] 关闭浏览器窗口 
 2016-03-02 13:17:23,727 INFO  [Log] ------------      "visit126MailHomePage01 "执行结束 ----------- 
+2016-03-03 10:48:41,101 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-03-03 10:48:41,139 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-03-03 10:48:45,103 INFO  [Log] IE浏览器实例已经声明 
+2016-03-03 10:48:45,104 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-03-03 10:48:47,055 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-03-03 10:48:47,055 INFO  [Log] 从Excel文件中读取的操作值是testform1 
+2016-03-03 10:48:47,237 INFO  [Log] 清除用户名输入框的所有内容 
+2016-03-03 10:48:47,506 INFO  [Log] 在用户名输入框输入用户名：testform1 
+2016-03-03 10:48:47,507 INFO  [Log] 从Excel文件中读取的操作值是zwb888888 
+2016-03-03 10:48:47,687 INFO  [Log] 清空密码输入框 
+2016-03-03 10:48:47,974 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 10:48:59,713 INFO  [Log] 单击登录按钮 
+2016-03-03 10:48:59,714 INFO  [Log] 从Excel文件中读取的操作值是homepage.logoutlink 
+2016-03-03 10:48:59,950 INFO  [Log] 显式等待元素出现成功，元素是homepage.logoutlink 
+2016-03-03 10:48:59,950 INFO  [Log] 从Excel文件中读取的操作值是homepage.writeLetterLink 
+2016-03-03 10:49:02,106 INFO  [Log] 单击写信链接成功 
+2016-03-03 10:49:02,106 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.recipientslink 
+2016-03-03 10:49:02,357 INFO  [Log] 显式等待元素出现成功，元素是writemailpage.recipientslink 
+2016-03-03 10:49:02,357 INFO  [Log] 从Excel文件中读取的操作值是testform1@126.com 
+2016-03-03 10:49:03,837 INFO  [Log] 在收件人输入框成功输入收件人信息：testform1@126.com 
+2016-03-03 10:49:03,837 INFO  [Log] 从Excel文件中读取的操作值是Hi，你好吗？ 
+2016-03-03 10:49:04,929 INFO  [Log] 成功输入邮件主题：Hi，你好吗？ 
+2016-03-03 10:49:04,930 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.addattachementlink 
+2016-03-03 10:49:10,920 INFO  [Log] 单击添加附件按钮成功 
+2016-03-03 10:49:10,921 INFO  [Log] 从Excel文件中读取的操作值是c:\a.log 
+2016-03-03 10:49:16,043 INFO  [Log] 成功粘贴上传文件名：c:\a.log 
+2016-03-03 10:49:16,043 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 10:49:16,043 INFO  [Log] 按键Enter键成功 
+2016-03-03 10:49:16,044 INFO  [Log] 从Excel文件中读取的操作值是4000 
+2016-03-03 10:49:20,045 INFO  [Log] 休眠4秒成功 
+2016-03-03 10:49:20,045 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 10:49:20,831 INFO  [Log] 单击发送邮件按钮成功 
+2016-03-03 10:49:20,831 INFO  [Log] 从Excel文件中读取的操作值是3000 
+2016-03-03 10:49:23,831 INFO  [Log] 休眠3秒成功 
+2016-03-03 10:49:23,831 INFO  [Log] 从Excel文件中读取的操作值是sendmailsuccesspage.succinfo 
+2016-03-03 10:49:23,919 INFO  [Log] 显式等待元素出现成功，元素是sendmailsuccesspage.succinfo 
+2016-03-03 10:49:23,919 INFO  [Log] 从Excel文件中读取的操作值是发送成功 
+2016-03-03 10:49:24,003 INFO  [Log] 出现断言失败，具体断言失败信息：expected [true] but found [false] 
+2016-03-03 10:49:24,004 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 10:49:24,004 INFO  [Log] 关闭浏览器窗口 
+2016-03-03 10:49:31,619 INFO  [Log] ------------      "SendMail01 "执行结束 ----------- 
+2016-03-03 10:49:33,620 INFO  [Log] ------------      "visit126MailHomePage01 "开始执行 ----------- 
+2016-03-03 10:49:33,624 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-03-03 10:49:36,170 INFO  [Log] IE浏览器实例已经声明 
+2016-03-03 10:49:36,170 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-03-03 10:49:39,940 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-03-03 10:49:39,941 INFO  [Log] 从Excel文件中读取的操作值是二维码登录 
+2016-03-03 10:49:39,987 INFO  [Log] 成功断言关键字“二维码登录“ 
+2016-03-03 10:49:39,987 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 10:49:39,987 INFO  [Log] 关闭浏览器窗口 
+2016-03-03 10:49:41,167 INFO  [Log] ------------      "visit126MailHomePage01 "执行结束 ----------- 
+2016-03-03 14:30:46,076 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-03-03 14:30:46,077 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-03-03 14:30:49,666 INFO  [Log] IE浏览器实例已经声明 
+2016-03-03 14:30:49,806 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-03-03 14:30:51,868 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-03-03 14:30:51,930 INFO  [Log] 从Excel文件中读取的操作值是testform1 
+2016-03-03 14:30:52,149 INFO  [Log] 清除用户名输入框的所有内容 
+2016-03-03 14:30:52,524 INFO  [Log] 在用户名输入框输入用户名：testform1 
+2016-03-03 14:30:52,555 INFO  [Log] 从Excel文件中读取的操作值是zwb888888 
+2016-03-03 14:30:52,742 INFO  [Log] 清空密码输入框 
+2016-03-03 14:30:53,117 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:30:53,976 INFO  [Log] 单击登录按钮 
+2016-03-03 14:30:54,007 INFO  [Log] 从Excel文件中读取的操作值是homepage.logoutlink 
+2016-03-03 14:31:04,247 INFO  [Log] 显示等待元素时出现异常，具体异常信息：Timed out after 10 seconds waiting for presence of element located by: By.xpath: //a[contains(.,'退出')]
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'd1-wenbing-zhu', ip: '10.128.165.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Session ID: 31301954-41b2-4239-acf5-9c5d735c66f3
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:38557/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}] 
+2016-03-03 14:31:04,341 INFO  [Log] 关闭浏览器窗口 
+2016-03-03 14:31:05,762 INFO  [Log] ------------      "SendMail01 "执行结束 ----------- 
+2016-03-03 14:31:19,466 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
+2016-03-03 14:31:19,481 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-03-03 14:31:22,633 INFO  [Log] IE浏览器实例已经声明 
+2016-03-03 14:31:22,758 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-03-03 14:31:23,524 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-03-03 14:31:23,570 INFO  [Log] 从Excel文件中读取的操作值是testform1 
+2016-03-03 14:31:23,758 INFO  [Log] 清除用户名输入框的所有内容 
+2016-03-03 14:31:24,116 INFO  [Log] 在用户名输入框输入用户名：testform1 
+2016-03-03 14:31:24,148 INFO  [Log] 从Excel文件中读取的操作值是zwb888888 
+2016-03-03 14:31:24,320 INFO  [Log] 清空密码输入框 
+2016-03-03 14:31:24,679 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:31:29,221 INFO  [Log] 单击登录按钮 
+2016-03-03 14:31:29,252 INFO  [Log] 从Excel文件中读取的操作值是homepage.logoutlink 
+2016-03-03 14:31:29,315 INFO  [Log] 显式等待元素出现成功，元素是homepage.logoutlink 
+2016-03-03 14:31:29,331 INFO  [Log] 从Excel文件中读取的操作值是homepage.writeLetterLink 
+2016-03-03 14:31:33,625 INFO  [Log] 单击写信链接成功 
+2016-03-03 14:31:33,641 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.recipientslink 
+2016-03-03 14:31:33,720 INFO  [Log] 显式等待元素出现成功，元素是writemailpage.recipientslink 
+2016-03-03 14:31:33,751 INFO  [Log] 从Excel文件中读取的操作值是testform1@126.com 
+2016-03-03 14:31:34,753 INFO  [Log] 在收件人输入框成功输入收件人信息：testform1@126.com 
+2016-03-03 14:31:34,768 INFO  [Log] 从Excel文件中读取的操作值是Hi，你好吗？ 
+2016-03-03 14:31:35,315 INFO  [Log] 成功输入邮件主题：Hi，你好吗？ 
+2016-03-03 14:31:35,331 INFO  [Log] 从Excel文件中读取的操作值是writemailpage.addattachementlink 
+2016-03-03 14:31:40,854 INFO  [Log] 单击添加附件按钮成功 
+2016-03-03 14:31:40,870 INFO  [Log] 从Excel文件中读取的操作值是c:\a.log 
+2016-03-03 14:31:46,067 INFO  [Log] 成功粘贴上传文件名：c:\a.log 
+2016-03-03 14:31:46,113 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:31:46,113 INFO  [Log] 按键Enter键成功 
+2016-03-03 14:31:46,146 INFO  [Log] 从Excel文件中读取的操作值是4000 
+2016-03-03 14:31:50,157 INFO  [Log] 休眠4秒成功 
+2016-03-03 14:31:50,219 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:31:50,766 INFO  [Log] 单击发送邮件按钮成功 
+2016-03-03 14:31:50,782 INFO  [Log] 从Excel文件中读取的操作值是3000 
+2016-03-03 14:31:53,773 INFO  [Log] 休眠3秒成功 
+2016-03-03 14:31:53,843 INFO  [Log] 从Excel文件中读取的操作值是sendmailsuccesspage.succinfo 
+2016-03-03 14:31:53,904 INFO  [Log] 显式等待元素出现成功，元素是sendmailsuccesspage.succinfo 
+2016-03-03 14:31:53,924 INFO  [Log] 从Excel文件中读取的操作值是发送成功 
+2016-03-03 14:31:53,974 INFO  [Log] 成功断言关键字“发送成功“ 
+2016-03-03 14:31:53,994 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:31:53,994 INFO  [Log] 关闭浏览器窗口 
+2016-03-03 14:31:57,620 INFO  [Log] ------------      "visit126MailHomePage01 "开始执行 ----------- 
+2016-03-03 14:31:57,620 INFO  [Log] 从Excel文件中读取的操作值是ie 
+2016-03-03 14:32:00,321 INFO  [Log] IE浏览器实例已经声明 
+2016-03-03 14:32:00,414 INFO  [Log] 从Excel文件中读取的操作值是http://www.126.com 
+2016-03-03 14:32:00,946 INFO  [Log] 浏览器访问网址http://www.126.com 
+2016-03-03 14:32:00,961 INFO  [Log] 从Excel文件中读取的操作值是二维码登录 
+2016-03-03 14:32:01,008 INFO  [Log] 成功断言关键字“二维码登录“ 
+2016-03-03 14:32:01,024 INFO  [Log] 从Excel文件中读取的操作值是无 
+2016-03-03 14:32:01,024 INFO  [Log] 关闭浏览器窗口 

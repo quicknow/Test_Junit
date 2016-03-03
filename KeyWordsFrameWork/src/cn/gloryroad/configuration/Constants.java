@@ -17,6 +17,12 @@ public class Constants {
 	//测试集合Sheet中的列号常量设定
 	public static final int Col_RunFlag=2;
 	
+	//第六列用5表示，测试结果列
+	public static final int Col_TestStepTestResult=5;
+	
+	//测试集合Sheet中的列号常量设定，测试用例执行结果列
+	public static final int Col_TestSuiteTestResult = 3;
+	
 	//测试用例Sheet名称的常量设定
 	public static final String Sheet_TestSteps="发送邮件";
 	
