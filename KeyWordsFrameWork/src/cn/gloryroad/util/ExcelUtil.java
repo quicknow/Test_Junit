@@ -68,15 +68,21 @@ public class ExcelUtil {
 		
 		ExcelWSheet = ExcelWBook.getSheet(SheetName);
 		try{
+			String CellData=null;
 			//通过函数参数指定单元格的行号和列号，获取指定的单元格对象
 			Cell =ExcelWSheet.getRow(RowNum).getCell(ColNum);
 			//如果单元格的内容为字符串类型，则使用getStringCellValue方法获取单元格的内容
 			//如果单元格的内容为数字类型，则使用getNumericeCellValue方法获取单元格的内容
-			String CellData = Cell.getCellType()==XSSFCell.CELL_TYPE_STRING?Cell.getStringCellValue()+""
+			if(Cell==null){
+				return CellData;
+			} else
+			 {
+				CellData = Cell.getCellType()==XSSFCell.CELL_TYPE_STRING?Cell.getStringCellValue()+""
 					: String.valueOf(Math.round(Cell.getNumericCellValue()));
 			//System.out.println("yyyeeeehehe-CellData="+CellData);
 			//函数返回指定单元格的字符串内容
-			return CellData;
+			 return CellData;
+			 }
 			
 		} catch(Exception e){
 			TestSuiteByExcel.testResult=false;						

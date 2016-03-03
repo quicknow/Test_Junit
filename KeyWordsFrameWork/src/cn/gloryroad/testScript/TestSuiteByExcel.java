@@ -16,6 +16,7 @@ public class TestSuiteByExcel {
 	public static int testLastStep;
 	public static String testCaseID;
 	public static String testCaseRunFlag;
+	public static String locatorExpression;
 	public static Boolean testResult=true;
 	
 	@Test
@@ -50,7 +51,11 @@ public class TestSuiteByExcel {
 				Log.startTestCase(testCaseID);
 				//在“发送邮件”Sheet中，获取当前要执行测试用例的第一个步骤所在行行
 				
+				//设定当前测试用的结果为true，即表明测试执行成功
+				testResult= true;
+				
 				System.out.println("用例开始执行");
+				//在“发送邮件”Sheet中，获取当前要执行测试用例的第一个步骤所在行的行号
 				testStep = ExcelUtil.getFirstRowContainsTestCaseID(Constants.Sheet_TestSteps, testCaseID, Constants.Col_TestCaseID);
 				System.out.println("testStep="+testStep);
 				//在“发送邮件”Sheet中，获取当前要执行测试用例的最后一个步骤所在行行号
@@ -63,12 +68,16 @@ public class TestSuiteByExcel {
 					
 					System.out.println(testStep+" "+keyword);
 					//在日志文件中打印操作值信息
-					//Log.info("从Excel文件中读取的操作值是"+value);
+					Log.info("从Excel文件中读取的操作值是"+keyword);
+					
+					locatorExpression= ExcelUtil.getCellData(Constants.Sheet_TestSteps,testStep, Constants.Col_LocatorExpression);
+					
+					System.out.println("locatorExpression="+locatorExpression);
 					value= ExcelUtil.getCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_ActionValue);
 					Log.info("从Excel文件中读取的操作值是"+value);
 					
 					System.out.println(testStep+" "+value);					
-					execute_Actions(keyword,value);
+					execute_Actions();
 					
 					if(testResult==false){
 					/*
@@ -105,7 +114,7 @@ public class TestSuiteByExcel {
 	}
 	
 			
-	private static void execute_Actions(String keyword,String value){
+	private static void execute_Actions(){
 		
 		try{
 			
@@ -116,19 +125,20 @@ public class TestSuiteByExcel {
 				 */
 				
 				if(method[i].getName().equals(keyword)){
-					method[i].invoke(keyWordsaction, value);
+					method[i].invoke(keyWordsaction, locatorExpression, value);
 					if(testResult == true){
 					/*
 					 * 当前测试步骤执行成功，在“发送邮件”Sheet中，会将当前执行的测试步骤结果设定为
 					 * “测试步骤执行成功”	
 					 */
 						ExcelUtil.setCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_TestStepTestResult, "测试步骤执行成功");
+						break;
 					} else{
 					 /*
 					  * 当前测试步骤执行失败，在“发送邮寄”Sheet中，会将当前执行的测试步骤结果设定为“测试步骤执行失败”
 					  */
 						ExcelUtil.setCellData(Constants.Sheet_TestSteps, testStep,Constants.Col_TestStepTestResult, "测试步骤执行失败");
-						KeyWordsAction.close_browser("");
+						KeyWordsAction.close_browser("","");
 						break;
 					}
 					
