@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43005" started-at="2016-03-03T09:26:08Z" finished-at="2016-03-03T09:26:51Z">
+  <suite name="Default suite" duration-ms="66319" started-at="2016-03-14T01:54:12Z" finished-at="2016-03-14T01:55:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43005" started-at="2016-03-03T09:26:08Z" finished-at="2016-03-03T09:26:51Z">
+    <test name="Default test" duration-ms="66319" started-at="2016-03-14T01:54:12Z" finished-at="2016-03-14T01:55:19Z">
       <class name="cn.gloryroad.testScript.TestSuiteByExcel">
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@7c3b761]" name="BeforeClass" is-config="true" duration-ms="140" started-at="2016-03-03T17:26:08Z" finished-at="2016-03-03T17:26:08Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@423c4542]" name="BeforeClass" is-config="true" duration-ms="312" started-at="2016-03-14T09:54:12Z" finished-at="2016-03-14T09:54:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testTestSuite()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@7c3b761]" name="testTestSuite" duration-ms="42865" started-at="2016-03-03T17:26:08Z" finished-at="2016-03-03T17:26:51Z">
+        <test-method status="PASS" signature="testTestSuite()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@423c4542]" name="testTestSuite" duration-ms="66006" started-at="2016-03-14T09:54:13Z" finished-at="2016-03-14T09:55:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTestSuite -->

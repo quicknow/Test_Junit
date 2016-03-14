@@ -1,5 +1,7 @@
 package cn.loryroad;
 
+import cn.loryroad.*;
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TestSendMail {
   private WebDriver driver;
+  
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -48,17 +51,40 @@ public class TestSendMail {
 	    
 	    driver.findElement(By.xpath("//*[contains(@id,'_mail_emailinput_0_')]/input")).sendKeys("1123@qq.com");
 	    
-	    //定位标题输入框  //*[contains(@id,'_mail_input_2')]/input
-	    //driver.findElement(By.xpath("//section[@class='tH0']/header/div[2]/div[1]/div/div/input")).sendKeys("1123");
-	    driver.findElement(By.xpath("//*[contains(@id,'_mail_input_2')]/input")).sendKeys("1123");
-	    //Thread.sleep(2000);
-	   // driver.switchTo().frame("1453259606042_attachUpload");
+
+	    Thread.sleep(500);
+	    //邮件主题输入内容
+	    driver.findElement(By.xpath("//div[contains(@id,'_mail_input') and (@aria-label='邮件主题输入框，请输入邮件主题')]/input")).sendKeys("想找死吗");
 	    
-	   //driver.findElement(By.xpath("//section[@class='tH0']/div[3]/div[1]/a[1]")).click();
-	    //driver.findElement(By.cssSelector("input[class='O0']"));
-	    //driver.findElement(By.xpath("//div[contains(@id,'_attachBrowser')]/input")).click();
-	    driver.findElement(By.xpath("//a[contains(@id,'_attachAdd')]")).click();
-	    												
+	    
+	    Thread.sleep(500);
+	    TestRob.PressTab();
+	    
+	    Thread.sleep(500);
+	    TestRob.Paste("hi,兄弟借点钱用用！");	  
+
+	    
+	   driver.findElement(By.xpath("//a[contains(@id,'_attachAdd')]")).click();
+	    
+	    /*
+	    Thread.sleep(500);
+	    (new TestRob()).Paste("c:\\a.log");
+	    
+	    (new TestRob()).PressEnter();
+	    
+	    //(new TestRob()).PressEnter();*/
+	    
+	    Thread.sleep(2000);    	    
+	  
+	    
+	    Runtime.getRuntime().exec("F:/selenium_java/Test_Junit/Junit4Proj/src/cn/loryroad/mail_uploadFile.exe");	    
+
+	    Thread.sleep(1000);
+	  
+	    driver.findElement(By.xpath("//div[contains(@id,'_mail_button_')]/span[contains(.,'发送')]")).click(); //注意掌握span[contains(text(),'发送')]的妙用
+	    
+	    //上传了附件不会发送，按回车才可以
+	    TestRob.PressEnter();
   }
 
   @After
