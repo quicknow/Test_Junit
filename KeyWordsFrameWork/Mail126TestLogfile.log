@@ -3038,6 +3038,7 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 2016-03-03 17:26:50,479 INFO  [Log] 从Excel文件中读取的操作值是无 
 2016-03-03 17:26:50,479 INFO  [Log] 关闭浏览器窗口 
 <<<<<<< HEAD
+<<<<<<< HEAD
 2016-03-06 13:32:38,536 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
 2016-03-06 13:32:38,536 INFO  [Log] 从Excel文件中读取的操作值是open_browser 
 2016-03-06 13:32:38,536 INFO  [Log] 从Excel文件中读取的操作值是ie 
@@ -3114,6 +3115,8 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 2016-03-06 13:34:16,456 INFO  [Log] 从Excel文件中读取的操作值是无 
 2016-03-06 13:34:16,456 INFO  [Log] 关闭浏览器窗口 
 =======
+=======
+>>>>>>> develop
 2016-03-14 09:54:16,095 INFO  [Log] ------------      "SendMail01 "开始执行 ----------- 
 2016-03-14 09:54:16,096 INFO  [Log] 从Excel文件中读取的操作值是open_browser 
 2016-03-14 09:54:16,096 INFO  [Log] 从Excel文件中读取的操作值是ie 
@@ -3189,4 +3192,7 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 2016-03-14 09:55:17,876 INFO  [Log] 从Excel文件中读取的操作值是close_browser 
 2016-03-14 09:55:17,876 INFO  [Log] 从Excel文件中读取的操作值是无 
 2016-03-14 09:55:17,876 INFO  [Log] 关闭浏览器窗口 
+<<<<<<< HEAD
 >>>>>>> 126閭鍙戦�佸甫闄勪欢鍜屾鏂囩殑閭欢鐨勮嚜鍔ㄥ寲娴嬭瘯
+=======
+>>>>>>> develop
