@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="102258" started-at="2016-03-06T05:32:35Z" finished-at="2016-03-06T05:34:17Z">
     <groups>
     </groups>
@@ -12,6 +13,18 @@
           </reporter-output>
         </test-method> <!-- BeforeClass -->
         <test-method status="PASS" signature="testTestSuite()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@42ae51c0]" name="testTestSuite" duration-ms="102040" started-at="2016-03-06T13:32:35Z" finished-at="2016-03-06T13:34:17Z">
+=======
+  <suite name="Default suite" duration-ms="66319" started-at="2016-03-14T01:54:12Z" finished-at="2016-03-14T01:55:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="66319" started-at="2016-03-14T01:54:12Z" finished-at="2016-03-14T01:55:19Z">
+      <class name="cn.gloryroad.testScript.TestSuiteByExcel">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@423c4542]" name="BeforeClass" is-config="true" duration-ms="312" started-at="2016-03-14T09:54:12Z" finished-at="2016-03-14T09:54:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testTestSuite()[pri:0, instance:cn.gloryroad.testScript.TestSuiteByExcel@423c4542]" name="testTestSuite" duration-ms="66006" started-at="2016-03-14T09:54:13Z" finished-at="2016-03-14T09:55:19Z">
+>>>>>>> 126邮箱发送带附件和正文的邮件的自动化测试
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTestSuite -->

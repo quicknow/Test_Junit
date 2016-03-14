@@ -23,7 +23,7 @@ public class KeyBoardUtil {
 		robot.keyPress(KeyEvent.VK_TAB);
 		
 		//调用keyRelease 方法来实现释放Tab键
-		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
 		
 	}
 	
@@ -42,7 +42,7 @@ public class KeyBoardUtil {
 		robot.keyPress(KeyEvent.VK_ENTER);
 				
 		//调用keyRelease 方法来实现释放Tab键
-		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
 	/*
