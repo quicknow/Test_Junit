@@ -14,6 +14,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
 public class TestSendMail {
   private WebDriver driver;
   
@@ -80,16 +83,30 @@ public class TestSendMail {
 	    Runtime.getRuntime().exec("F:/selenium_java/Test_Junit/Junit4Proj/src/cn/loryroad/mail_uploadFile.exe");	    
 
 	    Thread.sleep(1000);
-	  
+	    WebElement submitButton = driver.findElement(By.xpath("//div[contains(@id,'_mail_button_')]/span[contains(.,'发送')]"));
+	    highlightElement(submitButton);
+	    
 	    driver.findElement(By.xpath("//div[contains(@id,'_mail_button_')]/span[contains(.,'发送')]")).click(); //注意掌握span[contains(text(),'发送')]的妙用
 	    
 	    //上传了附件不会发送，按回车才可以
-	    TestRob.PressEnter();
+	    TestRob.PressEnter();    
+	  
   }
+  
+  //高亮显示元素的函数
+  public  void highlightElement(WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		/*
+		 * 使用JavaScript 语句将传入参数的页面元素对象的背景颜色和边框颜色分别设定为黄色和红色
+		 */
+		js.executeScript("arguments[0].setAttribute('style',arguments[1]);",element, "background:yellow;border:2px solid red;");
+	}
+  
+  
 
   @After
   public void tearDown() throws Exception {
-   // driver.quit();
+    //driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
