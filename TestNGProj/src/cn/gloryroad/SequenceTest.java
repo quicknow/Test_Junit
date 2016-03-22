@@ -17,6 +17,8 @@ public class SequenceTest {
 	@Test(priority = 0)
 	public void test1(){
 		System.out.println("test1方法被调用");
+		
+		
 	}
 	//跳过该方法
 	@Test(priority = 1,enabled=false)
