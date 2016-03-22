@@ -1,10 +1,11 @@
 package cn.loryroad;
 
 import java.awt.*;
-import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 
 public class TestRob {
@@ -72,5 +73,7 @@ public class TestRob {
 		rb.keyRelease(KeyEvent.VK_TAB);
 		
 	}
+	
+	
 
 }
