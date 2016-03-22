@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.gloryroad.VisitSogouByIE">
+      <class name="com.scrolling.TestDemo">
         <methods>
-          <include name="visitSogou"/>
-          <include name="setUp"/>
+          <include name="scrollingToElementtofAPage"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="scrollingByCoordinatesofAPage"/>
+          <include name="scrollingToBottomofAPage"/>
         </methods>
-      </class> <!-- cn.gloryroad.VisitSogouByIE -->
+      </class> <!-- com.scrolling.TestDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
