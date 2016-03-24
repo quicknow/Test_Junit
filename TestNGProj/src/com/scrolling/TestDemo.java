@@ -1,6 +1,9 @@
 package com.scrolling;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,10 +19,12 @@ public class TestDemo {
 		//测试网址为sogou首页的视频搜索首页
 		baseUrl="http://v.sogou.com";
 		//设定连接IE浏览器驱动程序所在的磁盘位置，并添加为系统属性值
-		driver = new InternetExplorerDriver();
-		driver.get(baseUrl);		
+		//driver = new InternetExplorerDriver();
+		driver= new ChromeDriver();
+		driver.get(baseUrl);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
-	
+	/*
 	//priority=1 表示测试用例以第一优先级运行
 	@Test(priority=1)
 	public void scrollingToBottomofAPage(){
@@ -32,8 +37,8 @@ public class TestDemo {
 		}catch(InterruptedException e){
 			e.printStackTrace();
 		}
-	}
-	
+	}*/
+	/*
 	//priority=2表示测试用例以第二优先级运行
 	@Test(priority=2)
 	public void scrollingToElementofAPage(){
@@ -50,7 +55,7 @@ public class TestDemo {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	//priority =3 表示测试用例以第三优先级运行
 	@Test(priority=3)
