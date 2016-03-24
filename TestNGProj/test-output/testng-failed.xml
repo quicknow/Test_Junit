@@ -5,10 +5,7 @@
     <classes>
       <class name="com.scrolling.TestDemo">
         <methods>
-          <include name="scrollingToElementtofAPage"/>
-          <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="scrollingByCoordinatesofAPage"/>
           <include name="scrollingToBottomofAPage"/>
         </methods>
       </class> <!-- com.scrolling.TestDemo -->
