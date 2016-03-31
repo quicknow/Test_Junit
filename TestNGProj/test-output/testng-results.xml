@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22672" started-at="2016-03-24T01:10:17Z" finished-at="2016-03-24T01:10:39Z">
+  <suite name="Default suite" duration-ms="16" started-at="2016-03-29T01:01:18Z" finished-at="2016-03-29T01:01:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22672" started-at="2016-03-24T01:10:17Z" finished-at="2016-03-24T01:10:39Z">
-      <class name="com.testHTML5VideoPlayer.TestHTML5VideoPlayer">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.testHTML5VideoPlayer.TestHTML5VideoPlayer@1b55e1e6]" name="beforeMethod" is-config="true" duration-ms="7218" started-at="2016-03-24T09:10:17Z" finished-at="2016-03-24T09:10:24Z">
+    <test name="Default test" duration-ms="16" started-at="2016-03-29T01:01:18Z" finished-at="2016-03-29T01:01:18Z">
+      <class name="cn.gloryroad.Annotaiton">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeSuite" is-config="true" duration-ms="31" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testVideoPlayer()[pri:0, instance:com.testHTML5VideoPlayer.TestHTML5VideoPlayer@1b55e1e6]" name="testVideoPlayer" duration-ms="13765" started-at="2016-03-24T09:10:24Z" finished-at="2016-03-24T09:10:38Z">
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="testCase2()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="testCase2" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testVideoPlayer -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testHTML5VideoPlayer.TestHTML5VideoPlayer@1b55e1e6]" name="afterMethod" is-config="true" duration-ms="1689" started-at="2016-03-24T09:10:38Z" finished-at="2016-03-24T09:10:39Z">
+        </test-method> <!-- testCase2 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.testHTML5VideoPlayer.TestHTML5VideoPlayer -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="testCase1" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- cn.gloryroad.Annotaiton -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

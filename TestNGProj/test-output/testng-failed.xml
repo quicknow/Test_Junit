@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.scrolling.TestDemo">
+      <class name="com.alert.TestHandleAlert">
         <methods>
           <include name="beforeMethod"/>
-          <include name="scrollingToBottomofAPage"/>
+          <include name="TestHandleAlert"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.scrolling.TestDemo -->
+      </class> <!-- com.alert.TestHandleAlert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
