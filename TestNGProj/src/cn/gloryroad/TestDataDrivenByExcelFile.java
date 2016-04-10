@@ -35,7 +35,7 @@ public class TestDataDrivenByExcelFile {
 	}
 	
 	//测试用例函数参数使用testData数据源的数据，每一行调用1次函数
-	@Test(dataProvider = "testData")
+	@Test(dataProvider = "testData") //参数的个数必须和DataProvider每一行的个数一致否则会报错
 	public void testSearch(String searchWord1,String searchWord2,String searchResult){
 		driver.get(baseUrl+"/");
 		driver.findElement(By.id("query")).sendKeys(searchWord1+" "+searchWord2);
@@ -71,6 +71,8 @@ public class TestDataDrivenByExcelFile {
 		
 		Workbook Workbook = null;
 		String fileExtensionName = fileName.substring(fileName.indexOf("."));
+		
+		System.out.println(fileName.indexOf("."));
 		
 		System.out.println("fileExtensionName="+fileExtensionName);
 		
