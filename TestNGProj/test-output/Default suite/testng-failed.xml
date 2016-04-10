@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.alert.TestHandleAlert">
+      <class name="cn.gloryroad.TestDataDrivenByExcelFile">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="TestHandleAlert"/>
           <include name="afterMethod"/>
+          <include name="beforeMehtod"/>
+          <include name="testSearch"/>
         </methods>
-      </class> <!-- com.alert.TestHandleAlert -->
+      </class> <!-- cn.gloryroad.TestDataDrivenByExcelFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

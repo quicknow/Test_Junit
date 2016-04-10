@@ -1,61 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16" started-at="2016-03-29T01:01:18Z" finished-at="2016-03-29T01:01:18Z">
+  <suite name="Default suite" duration-ms="94192" started-at="2016-04-06T01:39:54Z" finished-at="2016-04-06T01:41:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16" started-at="2016-03-29T01:01:18Z" finished-at="2016-03-29T01:01:18Z">
-      <class name="cn.gloryroad.Annotaiton">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeSuite" is-config="true" duration-ms="31" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+    <test name="Default test" duration-ms="94192" started-at="2016-04-06T01:39:54Z" finished-at="2016-04-06T01:41:29Z">
+      <class name="cn.gloryroad.TestDataDrivenByExcelFile">
+        <test-method status="PASS" signature="beforeMehtod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="beforeMehtod" is-config="true" duration-ms="5115" started-at="2016-04-06T09:39:55Z" finished-at="2016-04-06T09:40:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="testCase2()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="testCase2" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+        </test-method> <!-- beforeMehtod -->
+        <test-method status="PASS" signature="testSearch(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="testSearch" duration-ms="58100" started-at="2016-04-06T09:40:00Z" data-provider="testData" finished-at="2016-04-06T09:40:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[蝙蝠侠]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[主演]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[迈克尔]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase2 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+        </test-method> <!-- testSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="afterMethod" is-config="true" duration-ms="871" started-at="2016-04-06T09:40:58Z" finished-at="2016-04-06T09:40:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="testCase1" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+        <test-method status="PASS" signature="beforeMehtod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="beforeMehtod" is-config="true" duration-ms="4194" started-at="2016-04-06T09:40:59Z" finished-at="2016-04-06T09:41:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+        </test-method> <!-- beforeMehtod -->
+        <test-method status="PASS" signature="testSearch(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="testSearch" duration-ms="10899" started-at="2016-04-06T09:41:03Z" data-provider="testData" finished-at="2016-04-06T09:41:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[超人]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[导演]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[唐纳]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:cn.gloryroad.Annotaiton@3f1dc32c]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-03-29T09:01:18Z" finished-at="2016-03-29T09:01:18Z">
+        </test-method> <!-- testSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="afterMethod" is-config="true" duration-ms="1056" started-at="2016-04-06T09:41:14Z" finished-at="2016-04-06T09:41:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- cn.gloryroad.Annotaiton -->
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMehtod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="beforeMehtod" is-config="true" duration-ms="4057" started-at="2016-04-06T09:41:15Z" finished-at="2016-04-06T09:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMehtod -->
+        <test-method status="PASS" signature="testSearch(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="testSearch" duration-ms="8115" started-at="2016-04-06T09:41:19Z" data-provider="testData" finished-at="2016-04-06T09:41:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[生化危机]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[编剧]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[安德森]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:cn.gloryroad.TestDataDrivenByExcelFile@320de756]" name="afterMethod" is-config="true" duration-ms="1251" started-at="2016-04-06T09:41:27Z" finished-at="2016-04-06T09:41:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- cn.gloryroad.TestDataDrivenByExcelFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -63,7 +63,7 @@ public class TestDataDrivenByMysqlDatabase {
 		String password="88888888";
 		List<Object[]> records = new ArrayList<Object[]>();
 		try{
-			Class.forName(driver);
+			Class.forName(driver);//装载并实例化MySql驱动类
 			Connection conn = DriverManager.getConnection(url,user,password);
 			if(!conn.isClosed())
 				System.out.println("连接数据库成功！");
@@ -71,11 +71,13 @@ public class TestDataDrivenByMysqlDatabase {
 			Statement statement = conn.createStatement();
 			
 			String sql = "select * from" +" "+ tablename; //注意，from后面一定要加上空格，否则会造成语法错误
-			ResultSet rs = statement.executeQuery(sql);
+			ResultSet rs = statement.executeQuery(sql);   //rs的列是从1开始算起，没有0
 			System.out.println(rs);
 			ResultSetMetaData rsMetaData = rs.getMetaData();
+			System.out.println(rsMetaData);
 			
 			int cols = rsMetaData.getColumnCount();
+			System.out.println(cols);
 			while(rs.next()){
 				String fields[] = new String[cols];
 				int col = 0;
