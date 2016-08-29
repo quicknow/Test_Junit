@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" parallel="tests" thread-count="3">
+
+  <test name="FirefoxTest">
+    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub" /> 
+    <parameter name="browser" value="firefox" />     
+    <classes>
+    	<class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter"/>
+    </classes> 
+       
+  </test>
+    
+   <test name="IETest">
+    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub" /> 
+    <parameter name="browser" value="ie" />     
+    <classes>
+    	<class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter"/>
+    </classes> 
+       
+  </test>
+   
+ <test name="ChromeTest">
+    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub" /> 
+    <parameter name="browser" value="chrome" />     
+    <classes>
+    	<class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter"/>
+    </classes> 
+       
+  </test>
+      
+</suite>

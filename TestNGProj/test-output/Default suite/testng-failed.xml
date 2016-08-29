@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.gloryroad.TestDataDrivenByExcelFile">
+      <class name="com.testseleniumgrid.TestSeleniumGrid">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMehtod"/>
-          <include name="testSearch"/>
+          <include name="beforeMethod"/>
+          <include name="testSogouSearch"/>
         </methods>
-      </class> <!-- cn.gloryroad.TestDataDrivenByExcelFile -->
+      </class> <!-- com.testseleniumgrid.TestSeleniumGrid -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
