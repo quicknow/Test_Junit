@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="tests">
-  <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub"/>
-  <parameter name="browser" value="chrome"/>
-  <test name="IETest(failed)" parallel="tests">
-    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub"/>
-    <parameter name="browser" value="ie"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter">
+      <class name="cn.gloryroad.VisitSogouByChrome">
         <methods>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="testSogouSearch2"/>
+          <include name="visitSogou"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter -->
+      </class> <!-- cn.gloryroad.VisitSogouByChrome -->
     </classes>
-  </test> <!-- IETest(failed) -->
-  <test name="ChromeTest(failed)" parallel="tests">
-    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter">
-        <methods>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="testSogouSearch1"/>
-          <include name="testSogouSearch2"/>
-        </methods>
-      </class> <!-- com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test name="FirefoxTest(failed)" parallel="tests">
-    <parameter name="remoteNodeUrl" value="http://192.168.0.102:6655/wd/hub"/>
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter">
-        <methods>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="testSogouSearch1"/>
-          <include name="testSogouSearch2"/>
-        </methods>
-      </class> <!-- com.testseleniumbytestngparameter.TestSeleniumGridByTestNGParameter -->
-    </classes>
-  </test> <!-- FirefoxTest(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
